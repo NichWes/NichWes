@@ -1,9 +1,8 @@
 #define sangatCepat 50
 #define cepat 100
-#define pas 200
-#define lumayan 250
-#define normal 400
-#define lambat 1000
+#define pas 100
+#define lumayan 100
+#define speedPola1 80
 
 const int pinTerkecil = 2;
 const int pinTerbesar = 13;
@@ -18,6 +17,7 @@ void loop() {
   pola1();
   pola2();
   pola3();
+  
 
 }
 
@@ -86,7 +86,7 @@ void penuhKiriNormal() {
   delay(lumayan);
 
   PORTD = B11111100;
-  delay(10000);
+  delay(8000);
 }
 
 void penuhKiriPola2() {
@@ -173,64 +173,64 @@ void penuhKiriPola2() {
   delay(pas);
 
   PORTD = B11111100;
-  delay(12000);
+  delay(8000);
 }
 
 void pola1() {
   PORTB = B00000000;
   gerakKiri();
   PORTB = B00100000;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00010000;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00001000;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00000100;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00000010;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00000001;
-  delay(lumayan);
+  delay(speedPola1);
 
   gerakKiri();
   PORTB = B00100001;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00010001;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00001001;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00000101;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00000011;
-  delay(lumayan);
+  delay(speedPola1);
 
   gerakKiri();
   PORTB = B00100011;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00010011;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00001011;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00000111;
-  delay(lumayan);
+  delay(speedPola1);
 
   gerakKiri();
   PORTB = B00100111;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00010111;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00001111;
-  delay(lumayan);
+  delay(speedPola1);
 
   gerakKiri();
   PORTB = B00101111;
-  delay(lumayan);
+  delay(speedPola1);
   PORTB = B00011111;
-  delay(lumayan);
+  delay(speedPola1);
 
   gerakKiri();
   PORTB = B00111111;
-  delay(lumayan);
+  delay(speedPola1);
   
   penuhKiriNormal();
 }
@@ -365,6 +365,37 @@ void pola3() {
   PORTB = B00111110;
   delay(lumayan);
   PORTB = B00111111;
-  delay(12000);
+  delay(lambat);
+
+  PORTB = B00000000;
+  PORTD = B10000000;
+  delay(cepat);
+  PORTD = B11000000;
+  delay(cepat);
+  PORTD = B11100000;
+  delay(cepat);
+  
+  PORTD = B11110000;
+  delay(sangatCepat);  
+  PORTD = B11111000;
+  delay(sangatCepat);  
+  PORTD = B11111100;
+  delay(sangatCepat); 
+  PORTB = B00100000;
+  delay(sangatCepat); 
+  PORTB = B00110000;
+  delay(sangatCepat);
+  PORTB = B00111000;
+  delay(sangatCepat);
+
+  PORTB = B00111100;
+  delay(sangatCepat);
+  PORTB = B00111110;
+  delay(sangatCepat);
+  PORTB = B00111111;
+  delay(8000);
+
+
 
 }
+
