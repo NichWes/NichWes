@@ -3,6 +3,7 @@
 #define pas 100
 #define lumayan 100
 #define speedPola1 80
+#define lambat 1000
 
 const int pinTerkecil = 2;
 const int pinTerbesar = 13;
